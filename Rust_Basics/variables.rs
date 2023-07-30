@@ -51,7 +51,21 @@ fn main() {
     assert_eq!(d, 5);
     
     let d: i32 = 42; // re-declare
+                     // does not carry over mut or not
     println!("{}", d); // prints 42
+
+
+
+    let (mut x, y) = (1, 2); // destructuring tuple
+    x += 2;
+
+
+    let (x, y);
+
+    (x,..) = (3, 4); // .. for value we don't care about
+    [.., y] = [1, 2];
+
+    assert_eq!([x, y], [3, 2]);
 
 }
 
