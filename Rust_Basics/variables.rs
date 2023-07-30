@@ -24,6 +24,8 @@ fn main() {
     assert_eq!(z, 3);
     println!("Success");
 
+
+
     // Scope
     let a: i32 = 10;
     // new scope
@@ -32,5 +34,31 @@ fn main() {
         println!("a is {} and b is {}", a, b);
     }
     // var b is not valid here, outside of original scope
+
+    // call a function
+    define_c();
+
+
+
+    // shadowing
+    let d: i32 = 5;
+
+    {
+        let d = 12;
+        assert_eq!(d, 12);
+    }
+
+    assert_eq!(d, 5);
+    
+    let d: i32 = 42; // re-declare
+    println!("{}", d); // prints 42
+
+}
+
+fn define_c() {
+    
+    let c: &str = "Hello";
+
+    println!("{} World!", c);
 
 }
