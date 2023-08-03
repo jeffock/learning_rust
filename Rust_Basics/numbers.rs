@@ -50,6 +50,15 @@ fn main() {
                                              // 1024 + 255, 63, 255
                                              // = 1597
     assert!(v == 1597);
+
+
+
+    println!("0011 AND 0101 is {:04b}", 0b0011u32 & 0b0101);
+    println!("0011 OR 0101 is {:04b}", 0b0011u32 | 0b0101);
+    println!("0011 XOR 0101 is {:04b}", 0b0011u32 ^ 0b0101);
+    // 1 << 5 is 32
+    // 0x80 >> 2 is 0x20
+
 }
 
 // get the type of given var and return string rep of type
